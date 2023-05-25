@@ -22,3 +22,10 @@ import pandas as pd
 logs = pd.read_csv('/datasets/logs.csv')
 
 print(logs.source.unique())
+
+#Вы обнаружили NaN и None
+import pandas as pd
+
+hogwarts_points = pd.read_csv('/datasets/hogwarts_points.csv')
+hogwarts_points = hogwarts_points.fillna('Гриффиндор')
+print(hogwarts_points)
