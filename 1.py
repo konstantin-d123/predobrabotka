@@ -16,3 +16,9 @@ import pandas as pd
 logs = pd.read_csv('/datasets/logs.csv')
 print('Уникальных email:', len(logs.email.unique()))
 print('Уникальных User ID:', len(logs.user_id.unique()))
+
+import pandas as pd
+
+logs = pd.read_csv('/datasets/logs.csv')
+
+print(logs.source.unique())
