@@ -29,3 +29,13 @@ import pandas as pd
 hogwarts_points = pd.read_csv('/datasets/hogwarts_points.csv')
 hogwarts_points = hogwarts_points.fillna('Гриффиндор')
 print(hogwarts_points)
+
+import pandas as pd
+
+hogwarts_points = pd.read_csv('/datasets/hogwarts_points.csv')
+hogwarts_points['faculty_name'] = hogwarts_points['faculty_name'].fillna(value='Гриффиндор')
+print('Сумма баллов учеников:', hogwarts_points.points.sum())# сумма значений столбца 'points'
+print('Сумма баллов факультетов:', hogwarts_points.groupby('faculty_name').points.sum().sum())# сгруппируйте по столбцу 'faculty_name'
+# сложите значения столбца 'points' этой группировки методом sum()
+# и примените метод sum() к результату
+print('Кубок получает', hogwarts_points.groupby('faculty_name')['points'].sum().idxmax())
