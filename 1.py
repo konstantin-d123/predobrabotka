@@ -6,3 +6,8 @@ purchases = purchases.sort_values('repeated_share', ascending=False)
 print(purchases.sort_values('repeated_share', ascending=False))
 # print(purchases)
 # User ID и куки
+
+import pandas as pd
+logs = pd.read_csv('/datasets/logs.csv')
+print(logs.head())
+
