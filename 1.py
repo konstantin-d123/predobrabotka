@@ -39,3 +39,11 @@ print('Сумма баллов факультетов:', hogwarts_points.groupby
 # сложите значения столбца 'points' этой группировки методом sum()
 # и примените метод sum() к результату
 print('Кубок получает', hogwarts_points.groupby('faculty_name')['points'].sum().idxmax())
+
+
+import pandas as pd
+
+logs = pd.read_csv('/datasets/logs.csv')
+
+visits = logs.groupby('source')['user_id'].count()#общее количество визитов из каждого источника
+print(visits)
