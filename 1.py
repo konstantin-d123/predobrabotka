@@ -63,3 +63,11 @@ purchase = logs.groupby('source')['purchase'].sum() # количество по�
 
 conversion = purchase / visits# поделите количество покупок на количество визитов
 print(conversion)
+
+#Логические выражения в атрибуте loc
+import pandas as pd
+
+data = pd.read_csv('/datasets/projects.csv')
+
+rows = data['Новая функция'] == '+'
+print(data.loc[rows])
