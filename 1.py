@@ -78,3 +78,16 @@ import pandas as pd
 data = pd.read_csv('/datasets/projects.csv')
 rows = data['Статья'] == '+'
 print(data.loc[rows])
+
+import pandas as pd
+
+data = pd.read_csv('/datasets/projects.csv')
+
+print(data.loc[data['Новая функция'] == '+', 'Имя'])
+
+import pandas as pd
+
+data = pd.read_csv('/datasets/projects.csv')
+
+data.loc[data['Эксперимент'] == '+', 'Роль'] = 'экспериментатор'
+print(data)
