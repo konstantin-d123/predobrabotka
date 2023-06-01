@@ -106,3 +106,13 @@ data = pd.read_csv('/datasets/projects.csv')
 
 data.loc[data['Новая функция'] != '+', 'Новая функция'] = '-'
 print(data)
+
+#Работа с пропусками в категориальных переменных
+import pandas as pd
+
+logs = pd.read_csv('/datasets/logs.csv')
+logs['email'] = logs['email'].fillna(value='')
+logs.loc[logs['source'] == 'None', 'source'] = 'email'
+
+logs_grouped = logs.groupby('source').agg({'purchase': ['count', 'sum']}) #запишите ваш код сюда
+print(logs_grouped)
