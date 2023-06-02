@@ -140,3 +140,11 @@ import pandas as pd
 metrica = pd.read_csv('/datasets/metrica_data.csv')
 time_avg = metrica.time.mean()#запишите среднее время просмотра
 print(time_avg)
+
+import pandas as pd
+
+metrica = pd.read_csv('/datasets/metrica_data.csv')
+desktop_data = metrica.loc[metrica.device_type == 'desktop']
+#print(desktop_data.head())
+desktop_data_time_avg=desktop_data.time.mean()
+print(desktop_data_time_avg)
