@@ -208,3 +208,8 @@ import pandas as pd
 
 data = pd.read_excel('/datasets/seo_data.xlsx', sheet_name='traffic_data')
 data.info()
+
+import pandas as pd
+
+transactions = pd.read_excel('/datasets/ids.xlsx')
+pd.to_numeric(transactions.id)
