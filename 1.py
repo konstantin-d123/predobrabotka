@@ -181,3 +181,9 @@ data = pd.read_excel(
 )
 
 print(data.head())
+
+import pandas as pd
+
+data = pd.read_excel('/datasets/seo_data.xlsx', sheet_name='traffic_data')
+
+print(data.source.unique())
