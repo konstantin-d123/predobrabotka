@@ -173,3 +173,11 @@ mobile_data = metrica[metrica.device_type=='mobile']
 
 mobile_data_time_avg=mobile_data.time.mean()
 print(mobile_data_time_avg)
+
+import pandas as pd
+
+data = pd.read_excel(
+    '/datasets/seo_data.xlsx', sheet_name='traffic_data'
+)
+
+print(data.head())
