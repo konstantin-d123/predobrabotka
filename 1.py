@@ -140,3 +140,5 @@ import pandas as pd
 metrica = pd.read_csv('/datasets/metrica_data.csv')
 time_avg = metrica.time.mean()#запишите среднее время просмотра
 print(time_avg)
+
+# 02.06.2023 #
