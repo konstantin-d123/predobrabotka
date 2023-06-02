@@ -195,3 +195,11 @@ subcategory_dict = pd.read_excel(
 )
 
 print(subcategory_dict.head())
+
+import pandas as pd
+
+category_dict = pd.read_excel(
+    '/datasets/seo_data.xlsx', sheet_name='category_ids'
+)
+
+print(category_dict.head())
