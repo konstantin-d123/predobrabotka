@@ -213,3 +213,10 @@ import pandas as pd
 
 transactions = pd.read_excel('/datasets/ids.xlsx')
 pd.to_numeric(transactions.id)
+
+import pandas as pd
+
+transactions = pd.read_excel('/datasets/ids.xlsx')
+transactions.id = pd.to_numeric(transactions.id, errors='coerce')
+
+print(transactions.tail())
