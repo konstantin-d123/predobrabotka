@@ -187,3 +187,11 @@ import pandas as pd
 data = pd.read_excel('/datasets/seo_data.xlsx', sheet_name='traffic_data')
 
 print(data.source.unique())
+
+import pandas as pd
+
+subcategory_dict = pd.read_excel(
+    '/datasets/seo_data.xlsx', sheet_name='subcategory_ids'
+)
+
+print(subcategory_dict.head())
