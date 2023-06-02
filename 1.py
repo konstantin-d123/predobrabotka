@@ -127,3 +127,10 @@ logs_grouped = logs.groupby('source').agg({'purchase': ['count', 'sum']})
 
 logs_grouped['conversion'] = logs_grouped['purchase']['sum'] / logs_grouped['purchase']['count']
 print(logs_grouped)
+
+import pandas as pd
+
+metrica = pd.read_csv('/datasets/metrica_data.csv')
+age_avg = metrica['age'].mean()
+metrica.age=metrica.age.fillna(age_avg)
+print(metrica.head(10))
