@@ -156,3 +156,11 @@ metrica = pd.read_csv('/datasets/metrica_data.csv')
 desktop_data = metrica[metrica.device_type=='desktop']
 
 print(desktop_data.head(5))
+
+import pandas as pd
+
+metrica = pd.read_csv('/datasets/metrica_data.csv')
+
+mobile_data = metrica[metrica.device_type=='mobile']
+
+print(mobile_data.head(5))
