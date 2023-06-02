@@ -203,3 +203,8 @@ category_dict = pd.read_excel(
 )
 
 print(category_dict.head())
+
+import pandas as pd
+
+data = pd.read_excel('/datasets/seo_data.xlsx', sheet_name='traffic_data')
+data.info()
