@@ -257,3 +257,10 @@ import pandas as pd
 data = pd.read_excel('/datasets/seo_data.xlsx', sheet_name='traffic_data')
 
 print(data.loc[964,:])
+
+import pandas as pd
+
+data = pd.read_excel('/datasets/seo_data.xlsx', sheet_name='traffic_data')
+
+print('Количество строк:', data.shape[0])
+print(data[data['subcategory_id'] == 'total'])
