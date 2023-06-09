@@ -291,3 +291,9 @@ import pandas as pd
 position = pd.read_csv('/datasets/position.csv')
 
 print(position.head(15))
+
+import pandas as pd
+
+position = pd.read_csv('/datasets/position.csv')
+
+position.info()
