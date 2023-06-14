@@ -445,3 +445,9 @@ category_dict = pd.read_excel('/datasets/seo_data.xlsx', sheet_name='category_id
 data_subcategory = data.merge(subcategory_dict, on='subcategory_id', how='left')
 data_final = data_subcategory.merge(category_dict, on='category_id', how='left')
 print(data_final.head(10))
+
+# Сводные таблицы
+import pandas as pd
+data_final = pd.read_csv('/datasets/data_final.csv')
+data_pivot = data_final.pivot_table(index=['category_name', 'subcategory_name'], columns='source', values='visits', aggfunc='sum')
+print(data_pivot.head(10))
