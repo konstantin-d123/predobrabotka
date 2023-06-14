@@ -464,3 +464,10 @@ data_pivot = data_final.pivot_table(index=['category_name', 'subcategory_name'],
 data_pivot['ratio'] = data_pivot['organic'] / data_pivot['direct']
 
 print(data_pivot.sort_values(by='ratio', ascending=False).head(10))
+
+import pandas as pd
+data_final = pd.read_csv('/datasets/data_final.csv')
+data_pivot = data_final.pivot_table(index=['category_name', 'subcategory_name'], columns='source', values='visits', aggfunc='sum')
+data_pivot['ratio'] = data_pivot['organic'] / data_pivot['direct']
+
+print(data_pivot.sort_values(by='ratio', ascending=False).tail(10))
