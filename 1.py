@@ -471,3 +471,10 @@ data_pivot = data_final.pivot_table(index=['category_name', 'subcategory_name'],
 data_pivot['ratio'] = data_pivot['organic'] / data_pivot['direct']
 
 print(data_pivot.sort_values(by='ratio', ascending=False).tail(10))
+
+#Лаборатория ручного поиска дубликатов
+import pandas as pd
+
+stock = pd.read_excel('/datasets/stock.xlsx', sheet_name='storehouse')
+# ваш код здесь
+print(stock['item'].duplicated().sum())
