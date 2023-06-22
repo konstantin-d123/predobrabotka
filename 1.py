@@ -536,3 +536,8 @@ stock.loc[0, 'count'] = xiaomi
 stock.loc[3, 'count'] = huawei
 # выведите таблицу stock на экран
 print(stock)
+
+import pandas as pd
+
+support = pd.read_csv('/datasets/support.csv')
+print(support.head(10))
