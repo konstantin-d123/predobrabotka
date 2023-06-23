@@ -541,3 +541,7 @@ import pandas as pd
 
 support = pd.read_csv('/datasets/support.csv')
 print(support.head(10))
+
+import pandas as pd
+support = pd.read_csv('/datasets/support.csv')
+print(support.info())
